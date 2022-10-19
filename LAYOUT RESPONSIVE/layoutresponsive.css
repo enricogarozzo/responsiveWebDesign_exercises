@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 100%;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+nav,section,article{
+    margin: 0.5em auto;
+}
+
+
+nav{
+    background-color: blue; 
+    height: 100px;  
+}
+
+nav ul li{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+}
+
+
+nav ul:nth-of-type(1){
+    float: left;
+    line-height: 5em;
+}
+
+nav ul:nth-of-type(2){
+    float: right;
+}
+
+nav ul:nth-of-type(2) li{
+    float: left;
+    width: 4em;
+    height: 3.5em;
+    border: solid 1px black;
+    background-color: orange;
+    text-align: center;
+    line-height: 3.5em;
+    margin-right: 1em;
+}
+
+section{
+    display: block;
+    clear: both;
+    background-color: #ccc;
+    text-indent: 1em;
+}
+section p{
+        padding: 1em;       
+}
+
+article h3, section h3{ 
+    display: block;
+    line-height: 3em;   
+}
+
+article h3{
+    text-align: center;
+}
+
+article:nth-of-type(1){
+    background-color: pink;
+}
+
+article:nth-of-type(2){
+    background-color: palevioletred;  
+}
+
+
+article img{
+    display: block;
+    max-width: 100%;
+    margin: 1em auto;
+    padding: 1em;    
+}
+
+
+footer{
+    background-color: green;
+    height: 100px;
+    text-align: center;
+    padding-top: 0.1em;
+}
+
+
+@media screen and (min-width: 600px) {
+    section{
+        width: 100%;
+    }
+    article{
+        width: calc(50% - 0.5em);
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;       
+    }
+    article:nth-of-type(1){
+        float: left;
+        margin-right: 0.5em;       
+    }  
+    article:nth-of-type(2){
+        float: right;
+        margin-left: 0.5em;        
+    }
+}
+footer{
+    clear: both;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        position:relative
+    }
+    section{
+        border: solid 1px black;
+        width: calc(50% - 0.5em);
+        float: right;
+        position: absolute;
+        left: calc(25% + 0.25em);
+        min-height: 500px;
+    }
+    article{
+        border: solid 1px black;
+        width: calc(25% - 0.5em);  
+        position: absolute; 
+        min-height: 500px;
+    }
+
+    article:nth-of-type(1){
+        left: 0;
+        
+        float: left;
+    }
+
+    article:nth-of-type(2){
+      
+        left: 75%;   
+        float: right;   
+    }
+    footer{
+       clear: both;
+       display: block;
+       position: absolute ;
+       top: 630px;
+
+    }
+}
